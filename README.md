@@ -12,3 +12,6 @@ The form validates required fields and downloads a plain-text inquiry brief. It 
 Confirm incorporation and the legal name, business email, address, privacy information, and the actual product portfolio. Replace the company-in-formation language only once accurate. Do not add certification badges, partner logos, market claims or license numbers without verification and authorization.
 
 The website describes a prospective sourcing and export coordination business, not a manufacturer. Categories indicate areas to explore rather than approved or available products.
+
+## Vercel
+The Vercel build uses the same React page and styles with a static Vite entry. Run `npm run build:vercel`; the output is `dist-vercel`. The included vercel.json configures this build. The deployed site uses optimized WebP images; original PNG assets remain available. The inquiry form continues to download briefs and does not send email.
