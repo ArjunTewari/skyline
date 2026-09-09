@@ -1204,3 +1204,265 @@ textarea:focus {
     transform: none;
   }
 }
+
+/* Phone layout: comfortable reading, touch targets, and single-column content. */
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .topbar {
+    justify-content: center;
+    min-height: 32px;
+    padding: 8px 6%;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+  }
+  .header {
+    padding: 12px 6%;
+    gap: 12px;
+  }
+  .brand {
+    min-width: 0;
+    gap: 9px;
+  }
+  .brandmark {
+    width: 43px;
+    height: 43px;
+  }
+  .brand-name {
+    font-size: 25px;
+    letter-spacing: 0.04em;
+  }
+  .brand small {
+    font-size: 8px;
+    letter-spacing: 0.17em;
+  }
+  .menubutton {
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 8px;
+    border-radius: 50%;
+  }
+  .nav.open {
+    gap: 2px;
+    padding: 12px 6% 18px;
+    box-shadow: 0 18px 30px #0f303e14;
+  }
+  .nav.open a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5ecea;
+  }
+  .hero {
+    padding: 42px 6% 22px;
+    gap: 28px;
+  }
+  .hero h1 {
+    color: #f7fbfa;
+    font-size: clamp(43px, 13vw, 56px);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+  }
+  .hero-main > p {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+    margin: 27px 0;
+  }
+  .actions .button {
+    width: 100%;
+  }
+  .textlink {
+    min-height: 44px;
+    justify-content: center;
+  }
+  .button,
+  .inline-link,
+  .category {
+    min-height: 44px;
+  }
+  .hero-note {
+    align-items: flex-start;
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .hero-bottom {
+    margin-top: 4px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+  .audience {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 18px;
+  }
+  .audience > span {
+    grid-column: 1 / -1;
+    margin-bottom: 3px;
+  }
+  .audience p {
+    font-size: 14px;
+  }
+  .section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+  .section-head > p {
+    max-width: none;
+  }
+  .category-grid,
+  .quality-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .category {
+    padding: 24px 20px;
+  }
+  .category h3,
+  .quality-grid h3 {
+    min-height: 0;
+    font-size: 26px;
+  }
+  .category p,
+  .quality-grid p,
+  .partner-grid p {
+    font-size: 15px;
+  }
+  .markets h2 {
+    font-size: 43px;
+  }
+  .market-panel {
+    padding: 22px 18px;
+  }
+  .market-row {
+    min-height: 56px;
+    line-height: 1.4;
+  }
+  .quality-note {
+    line-height: 1.5;
+  }
+  .contact form {
+    padding: 22px 18px;
+  }
+  label,
+  .form-heading span {
+    font-size: 14px;
+  }
+  input,
+  textarea {
+    font-size: 16px !important;
+  }
+  .footer-top > a:last-child {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 390px) {
+  .brandmark {
+    width: 39px;
+    height: 39px;
+  }
+  .brand-name {
+    font-size: 23px;
+  }
+  .brand small {
+    font-size: 7.5px;
+  }
+  .hero h1 {
+    font-size: 43px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .art-footer {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
+  html {
+    scroll-padding-top: 88px;
+  }
+  .header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .menubutton {
+    display: block;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 8px;
+    border: 0;
+    border-radius: 50%;
+    background: none;
+    color: #183f4b;
+  }
+  .nav {
+    display: none;
+  }
+  .nav.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 5% 18px;
+    border-bottom: 1px solid #cadcd5;
+    background: white;
+    box-shadow: 0 18px 30px #0f303e14;
+    font-size: 16px;
+  }
+  .nav.open a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5ecea;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hero-main > p {
+    max-width: 640px;
+  }
+  .hero-art {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .split,
+  .contact,
+  .markets {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  .section-head {
+    display: block;
+  }
+  .section-head > p {
+    max-width: 620px;
+    margin-top: 22px;
+  }
+  .quality-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
