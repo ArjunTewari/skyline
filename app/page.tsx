@@ -576,9 +576,23 @@ export default function Home() {
             <br />
             with international opportunity.
           </p>
-          <a href="#contact">
-            Let’s start a conversation <ArrowUpRight size={20} />
-          </a>
+          <div className="footer-actions">
+            <a href="#contact">
+              Let’s start a conversation <ArrowUpRight size={20} />
+            </a>
+            <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/company/skylinexports"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Skyline Exports on LinkedIn (opens in a new tab)"
+            >
+              <span className="linkedin-logo" aria-hidden="true">
+                in
+              </span>
+              LinkedIn
+            </a>
+          </div>
         </div>
         <div className="footer-bottom">
           <span>

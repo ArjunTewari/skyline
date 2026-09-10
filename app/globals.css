@@ -711,11 +711,41 @@ footer {
   font-size: 14px;
   margin: 0;
 }
-.footer-top > a:last-child {
+.footer-actions {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 24px;
+}
+.footer-actions a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 14px;
+}
+.footer-actions .linkedin-link {
+  border: 1px solid #58727c;
+  border-radius: 4px;
+  padding: 10px 13px;
+  transition: background 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease;
+}
+.footer-actions .linkedin-link:hover {
+  background: #1d4a59;
+  border-color: #8cabb3;
+  transform: translateY(-2px);
+}
+.linkedin-logo {
+  display: inline-grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 3px;
+  background: #0a66c2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
 }
 .footer-bottom {
   display: flex;
@@ -1365,8 +1395,12 @@ textarea:focus {
   textarea {
     font-size: 16px !important;
   }
-  .footer-top > a:last-child {
+  .footer-actions a {
     min-height: 44px;
+  }
+  .footer-actions {
+    flex-wrap: wrap;
+    gap: 14px 20px;
   }
 }
 
