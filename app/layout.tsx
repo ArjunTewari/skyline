@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: 'Starline Health | Pharmaceutical Sourcing & Export',
   description:
     'India-based pharmaceutical and healthcare sourcing partner in formation. Explore product categories, manufacturer collaboration and international B2B inquiries.',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
