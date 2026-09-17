@@ -54,7 +54,7 @@ function BrandMark() {
         S
       </text>
       <text className="brand-e" x="30" y="47">
-        E
+        H
       </text>
       <path className="brand-horizon" d="M27 37c10-1 18-5 28-12" />
     </svg>
@@ -113,7 +113,7 @@ export default function Home() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const brief =
-      'SKYLINE EXPORTS PVT LTD — INQUIRY BRIEF\nNot submitted. Retain this brief until a contact channel is available.\n\n' +
+      'STARLINE HEALTH — INQUIRY BRIEF\nNot submitted. Retain this brief until a contact channel is available.\n\n' +
       Array.from(data.entries())
         .map(([k, v]) => `${k}: ${v}`)
         .join('\n\n');
@@ -122,7 +122,7 @@ export default function Home() {
     );
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'skyline-inquiry.txt';
+    a.download = 'starline-health-inquiry.txt';
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     setDownloaded(true);
@@ -139,11 +139,11 @@ export default function Home() {
         </span>
       </div>
       <header className="header">
-        <a className="brand" href="#home" aria-label="Skyline Exports home">
+        <a className="brand" href="#home" aria-label="Starline Health home">
           <BrandMark />
           <span className="brand-copy">
-            <span className="brand-name">SKYLINE</span>
-            <small>EXPORTS PVT LTD</small>
+            <span className="brand-name">STARLINE</span>
+            <small>HEALTH</small>
           </span>
         </a>
         <nav className={menu ? 'nav open' : 'nav'} aria-label="Main navigation">
@@ -196,35 +196,35 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <aside className="hero-side hero-art">
-            <figure>
-              <img
-                src="/images/skyline-hero.webp"
-                alt="Conceptual healthcare sourcing still life with unbranded packaging, a blister pack and a teal glass globe"
-                width={1536}
-                height={1024}
-                fetchPriority="high"
-              />
-              <figcaption>
-                INDIAN HEALTHCARE. INTERNATIONAL OPPORTUNITY.
-              </figcaption>
-            </figure>
-            <div className="art-footer">
-              <span>
-                Building connections.
-                <br />
-                <strong>Exploring possibilities.</strong>
-              </span>
-              <a href="#partners" aria-label="Explore partnering with Skyline">
-                <ArrowUpRight size={25} />
-              </a>
+          <aside
+            className="hero-side hero-editorial"
+            aria-label="Starline Health approach"
+          >
+            <div className="editorial-number">01</div>
+            <p>Pharmaceutical &amp; healthcare sourcing</p>
+            <div className="editorial-list">
+              <span>Product fit</span>
+              <span>Documentation</span>
+              <span>Market pathway</span>
             </div>
-            <span className="art-disclaimer">
-              Concept illustration · Not a representation of available products
-            </span>
+            <a href="#partners">
+              Explore our approach <ArrowUpRight size={20} />
+            </a>
           </aside>
+          <div
+            className="reference-logo"
+            role="img"
+            aria-label="Starline Health logo"
+          >
+            <img
+              src="/images/starline-card-reference.webp"
+              alt=""
+              width={1050}
+              height={600}
+            />
+          </div>
           <div className="hero-bottom">
-            <span>FOR THE BUSINESS OF BETTER HEALTHCARE</span>
+            <span>STARLINE HEALTH</span>
             <span>Scroll to discover ↓</span>
           </div>
         </section>
@@ -238,7 +238,7 @@ export default function Home() {
         </section>
         <section className="section split" id="about">
           <div>
-            <div className="eyebrow">01 / ABOUT SKYLINE</div>
+            <div className="eyebrow">01 / ABOUT STARLINE</div>
             <h2>
               A sourcing partner.
               <br />A shared ambition.
@@ -246,7 +246,7 @@ export default function Home() {
           </div>
           <div>
             <p className="large">
-              We’re building Skyline Exports Pvt Ltd to make pharmaceutical and
+              We’re building Starline Health to make pharmaceutical and
               healthcare sourcing from India more connected, transparent and
               purposeful.
             </p>
@@ -410,9 +410,10 @@ export default function Home() {
           <div className="quality-note">
             <ShieldCheck size={24} />
             <p>
-              Skyline does not claim manufacturing certifications, export
-              licenses or product approvals. Any applicable credentials will be
-              verified and shared in the context of a specific opportunity.
+              Starline Health does not claim manufacturing certifications,
+              export licenses or product approvals. Any applicable credentials
+              will be verified and shared in the context of a specific
+              opportunity.
             </p>
           </div>
         </section>
@@ -555,8 +556,8 @@ export default function Home() {
             </button>
             {downloaded && (
               <p className="success" role="status">
-                Your brief is ready. It has not been sent to Skyline. Keep the
-                downloaded file until a contact channel is available.
+                Your brief is ready. It has not been sent to Starline Health.
+                Keep the downloaded file until a contact channel is available.
               </p>
             )}
           </form>
@@ -564,11 +565,11 @@ export default function Home() {
       </main>
       <footer>
         <div className="footer-top">
-          <a className="brand" href="#home" aria-label="Skyline Exports home">
+          <a className="brand" href="#home" aria-label="Starline Health home">
             <BrandMark />
             <span className="brand-copy">
-              <span className="brand-name">SKYLINE</span>
-              <small>EXPORTS PVT LTD</small>
+              <span className="brand-name">STARLINE</span>
+              <small>HEALTH</small>
             </span>
           </a>
           <p>
@@ -585,7 +586,7 @@ export default function Home() {
               href="https://www.linkedin.com/company/skylinexports"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Skyline Exports on LinkedIn (opens in a new tab)"
+              aria-label="Company LinkedIn page (opens in a new tab)"
             >
               <span className="linkedin-logo" aria-hidden="true">
                 in
@@ -596,8 +597,7 @@ export default function Home() {
         </div>
         <div className="footer-bottom">
           <span>
-            © {new Date().getFullYear()} Skyline Exports Pvt Ltd · Company in
-            formation
+            © {new Date().getFullYear()} Starline Health · Company in formation
           </span>
           <span>
             B2B inquiries only · All opportunities subject to verification

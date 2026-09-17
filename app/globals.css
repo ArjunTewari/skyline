@@ -726,7 +726,9 @@ footer {
   border: 1px solid #58727c;
   border-radius: 4px;
   padding: 10px 13px;
-  transition: background 0.2s ease, border-color 0.2s ease,
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
     transform 0.2s ease;
 }
 .footer-actions .linkedin-link:hover {
@@ -1498,5 +1500,504 @@ textarea:focus {
   }
   .form-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Starline-inspired editorial theme */
+:root {
+  --background: #f4f4f2;
+  --foreground: #111213;
+  --primary: #111213;
+  --primary-foreground: #ffffff;
+  --border: #c9c9c5;
+  --input: #b9b9b4;
+  --ring: #3b3c3d;
+  --muted: #e8e8e5;
+  --muted-foreground: #666762;
+  --card: #f8f8f6;
+  --card-foreground: #111213;
+  --accent: #deded9;
+  --accent-foreground: #111213;
+  --font-display: 'Cormorant Garamond', 'Bodoni MT', Didot, Georgia, serif;
+  --font-body: 'Manrope', Helvetica, Arial, sans-serif;
+  --font-ui: 'Manrope', Helvetica, Arial, sans-serif;
+}
+
+body {
+  color: #111213;
+  background: #f4f4f2;
+}
+
+p {
+  color: #5d5e5a;
+}
+
+h1,
+h2,
+h3,
+.brand-name {
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline-color: #8a8a86;
+}
+
+.topbar {
+  background: #0b0c0d;
+  color: #e8e8e4;
+  border-bottom: 1px solid #292a2b;
+}
+
+.header {
+  background: rgb(247 247 245 / 94%);
+  border-bottom-color: #cfcfca;
+  box-shadow: none;
+}
+
+.brandmark,
+.nav a,
+.menubutton {
+  color: #101112;
+}
+
+.brand-horizon {
+  stroke: #62635f;
+}
+
+.nav a:hover {
+  color: #666762;
+}
+
+.nav a::after {
+  background: #111213;
+}
+
+.button {
+  border-radius: 0;
+  background: #111213;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.button:hover {
+  background: #353638;
+}
+
+.hero {
+  position: relative;
+  min-height: min(790px, calc(100vh - 96px));
+  isolation: isolate;
+  overflow: hidden;
+  align-items: start;
+  grid-template-columns: minmax(0, 1.45fr) minmax(250px, 0.55fr);
+  gap: clamp(44px, 8vw, 120px);
+  padding: clamp(86px, 10vh, 130px) 5% 190px;
+  background-color: #08090a;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(4 5 6 / 48%) 0%,
+      rgb(4 5 6 / 12%) 58%,
+      rgb(4 5 6 / 38%) 100%
+    ),
+    url('/images/starline-smoke-hero.webp');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, transparent 55%, rgb(0 0 0 / 58%) 100%);
+  pointer-events: none;
+}
+
+.hero-main {
+  max-width: 810px;
+}
+
+.hero .eyebrow {
+  color: #dadad4;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.hero .dot {
+  width: 5px;
+  height: 5px;
+  background: #f2f2ee;
+}
+
+.hero h1 {
+  max-width: 790px;
+  font-size: clamp(64px, 8.2vw, 112px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.hero-main > p {
+  max-width: 570px;
+  margin-top: 34px;
+  color: #cececa;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero .lime {
+  background: #f2f2ee;
+  color: #101112;
+}
+
+.hero .lime:hover {
+  background: #d8d8d3;
+}
+
+.hero .textlink {
+  color: #f2f2ee;
+  border-bottom: 1px solid #70716f;
+  padding-bottom: 5px;
+}
+
+.hero-note {
+  color: #babbb7;
+}
+
+.hero-editorial {
+  align-self: center;
+  margin-top: 20px;
+  padding: 0 0 0 28px;
+  border: 0;
+  border-left: 1px solid rgb(255 255 255 / 38%);
+  background: transparent;
+}
+
+.editorial-number {
+  margin-bottom: 55px;
+  color: #777976;
+  font-family: var(--font-display);
+  font-size: 70px;
+  line-height: 0.8;
+}
+
+.hero-editorial > p {
+  max-width: 250px;
+  color: #f1f1ed;
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1.08;
+}
+
+.editorial-list {
+  display: grid;
+  margin: 32px 0;
+  color: #bfc0bd;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.editorial-list span {
+  padding: 10px 0;
+  border-top: 1px solid rgb(255 255 255 / 22%);
+}
+
+.hero-editorial > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #767774;
+  color: #fff;
+  font-size: 13px;
+}
+
+.reference-logo {
+  position: absolute;
+  bottom: 24px;
+  left: 5%;
+  z-index: 2;
+  width: 252px;
+  height: 166px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 18%);
+  background: #ececea;
+  box-shadow: 0 18px 55px rgb(0 0 0 / 28%);
+}
+
+.reference-logo img {
+  position: absolute;
+  top: -334px;
+  left: -29px;
+  width: 1050px;
+  max-width: none;
+  height: 600px;
+}
+
+.hero-bottom {
+  position: absolute;
+  right: 5%;
+  bottom: 32px;
+  left: 35%;
+  margin: 0;
+  color: #a5a6a3;
+  border-top-color: rgb(255 255 255 / 24%);
+}
+
+.audience {
+  background: #f4f4f2;
+  border-color: #cfcfca;
+}
+
+.audience p {
+  color: #111213;
+  font-family: var(--font-display);
+  font-size: 20px;
+}
+
+.section {
+  background: #f7f7f5;
+}
+
+.eyebrow {
+  color: #777872;
+}
+
+.large {
+  color: #202122;
+  font-family: var(--font-display);
+  font-size: 27px;
+  line-height: 1.42;
+}
+
+.inline-link {
+  color: #111213;
+  border-color: #777872;
+}
+
+.products,
+.partner-section {
+  background: #e8e8e5;
+}
+
+.product-visual {
+  border-radius: 0;
+  background: #d8d8d4;
+}
+
+.product-visual img {
+  filter: grayscale(1) contrast(1.05);
+}
+
+.category {
+  border-radius: 0;
+  border-color: #b9b9b3;
+  background: #f4f4f2;
+}
+
+.category:hover {
+  border-color: #111213;
+  background: #111213;
+  color: #fff;
+}
+
+.category:hover p,
+.category:hover .category-top,
+.category:hover .category-top span {
+  color: #cfcfca;
+}
+
+.markets {
+  background: #101112;
+  color: #fff;
+}
+
+.markets .eyebrow,
+.markets em {
+  color: #c8c8c3;
+}
+
+.market-panel {
+  border-radius: 0;
+  border-color: #555654;
+}
+
+.market-row {
+  border-color: #454644;
+}
+
+.quality-grid article,
+.partner-grid article,
+.contact-status {
+  border-color: #b7b7b2;
+}
+
+.quality-note {
+  border-left: 3px solid #111213;
+  background: #e9e9e6;
+  color: #111213;
+}
+
+.contact form {
+  border-radius: 0;
+  border-color: #a9a9a4;
+  background: #f1f1ee;
+}
+
+input,
+textarea {
+  border-radius: 0 !important;
+  border-color: #b5b5b0 !important;
+  background: #fbfbf9 !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #111213 !important;
+  box-shadow: 0 0 0 2px rgb(17 18 19 / 10%) !important;
+}
+
+.submit {
+  background: #111213;
+}
+
+footer {
+  background: #0b0c0d;
+}
+
+.footer-actions .linkedin-link {
+  border-radius: 0;
+  border-color: #5b5c59;
+}
+
+.linkedin-logo {
+  background: #f1f1ed;
+  color: #111213;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding-top: 76px;
+    padding-bottom: 210px;
+  }
+
+  .hero-editorial {
+    width: min(100%, 520px);
+    margin-top: 0;
+  }
+
+  .editorial-number {
+    display: none;
+  }
+
+  .hero-bottom {
+    left: 360px;
+  }
+}
+
+@media (max-width: 760px) {
+  .header {
+    background: rgb(247 247 245 / 97%);
+  }
+
+  .nav.open {
+    background: #f7f7f5;
+    border-color: #c7c7c2;
+    box-shadow: 0 18px 30px rgb(0 0 0 / 10%);
+  }
+
+  .nav.open a {
+    border-color: #d4d4cf;
+  }
+
+  .hero {
+    gap: 40px;
+    padding: 62px 6% 196px;
+    background-position: 56% center;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 16vw, 76px);
+    line-height: 0.92;
+  }
+
+  .hero-main > p {
+    font-size: 15px;
+  }
+
+  .hero-editorial {
+    padding-left: 20px;
+  }
+
+  .hero-editorial > p {
+    font-size: 24px;
+  }
+
+  .reference-logo {
+    bottom: 22px;
+    left: 6%;
+    width: 200px;
+    height: 130px;
+  }
+
+  .reference-logo img {
+    top: -267px;
+    left: -23px;
+    width: 840px;
+    height: 480px;
+  }
+
+  .hero-bottom {
+    right: 6%;
+    bottom: 28px;
+    left: 236px;
+    display: block;
+    padding-top: 10px;
+    font-size: 9px;
+    text-align: right;
+  }
+
+  .hero-bottom span:first-child {
+    display: none;
+  }
+
+  .audience p {
+    font-size: 18px;
+  }
+
+  .large {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding-bottom: 212px;
+  }
+
+  .reference-logo {
+    width: 184px;
+    height: 122px;
+  }
+
+  .reference-logo img {
+    top: -249px;
+    left: -21px;
+    width: 784px;
+    height: 448px;
+  }
+
+  .hero-bottom {
+    left: 216px;
   }
 }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Skyline Exports Pvt Ltd | Pharmaceutical Sourcing & Export',
+  title: 'Starline Health | Pharmaceutical Sourcing & Export',
   description:
     'India-based pharmaceutical and healthcare sourcing partner in formation. Explore product categories, manufacturer collaboration and international B2B inquiries.',
 };
